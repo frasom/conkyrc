@@ -1,0 +1,13 @@
+#!/bin/bash
+# This script checks the health of the hard drive using smartctl and HDSentinel, and writes the results to a file.
+# Ensure the script is run with root privileges
+
+smartctl -a /dev/sda |egrep "Errors Logged|Error Count" |cut -c -21 > /home/USERNAME/.conky/hdstatus
+
+temp=$(sudo smartctl -a /dev/sda |grep ^190 | awk '{print $10}')
+printf "%s" $temp > /home/USERNAME/.conky/hdtemp
+
+/root/bin/HDSentinel /dev/sda |grep Health|cut -c 16-20 > /home/USERNAME/.conky/hdhealth
+
+/root/bin/HDSentinel /dev/sda |grep Performance |cut -c 16-20 > /home/USERNAME/.conky/hdperform
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+# Info: An OpenWeather API key is required for the weather data.
+# https://openweathermap.org/
+# The output is saved under /tmp/wetter.json
+
+set -e
+
+# Location for weather data
+wget --output-document=/tmp/wetter.json "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}"
+# Replace {lat}, {lon}, and {API key} with actual values
+# Example: wget --output-document=/tmp/wetter.json "https://api.openweathermap.org/data/2.5/weather?lat=52.5200&lon=13.4050&appid=your_api_key"
+                                                                                                                                        
