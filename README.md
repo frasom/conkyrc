@@ -21,12 +21,6 @@ Here is a screenshot of my Conky installation.
 _Some displays depend on which sensor information your system provides_
 
 ## Installation
-Additionally, the following programs are used by the configuration/scripts and must be installed
-
-* lm-sensors (sensor used by conky)
-* Hard Disk Sentinel [HDSentinel](https://www.hdsentinel.com/download.php) for hard drive health
-* curl (html text converter for conky)
-* Fonts used by conky (Ubuntu, OpenLogos, Poky, Weather)
 
 ### Conky
 You can find detailed instructions on the [Conky Github page](https://github.com/brndnmtthws/conky)
@@ -68,6 +62,8 @@ To update the HD status, the script "hdhealth" is added to root's crontab (every
 ``
 0 * * * *	/Path_to_the_file/hdhealth > /dev/null 2>&1
 ``
+
+#### other
 
 Additionally, the following programs are used by the configuration/scripts and must be installed
 
