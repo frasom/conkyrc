@@ -57,6 +57,8 @@ The individual values ​​are extracted from the weather data using the php pr
 The hard drive status is read using Hard Disk Sentinel. [HDSentinel](https://www.hdsentinel.com/) must be installed for this to work.
 The script hdhealth checks the health of the hard drive using smartctl and HDSentinel, and writes the results to a conky configuration file
 
+Please change USERNAME in lines 5, 8, 10, 11 with your username
+
 To update the HD status, the script "hdhealth" is added to root's crontab (every hour).
 
 ``

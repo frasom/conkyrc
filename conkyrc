@@ -71,7 +71,6 @@ ${goto 32}OS:  ${alignr}${color1}${execi 900 lsb_release -a 2>>/dev/null |grep D
 ${alignr}${color1}${execi 900 cat /etc/*-release |grep VERSION= |cut -d '(' -f2 |sed 's/..$//'}${color0}
 ${goto 32}Kernel:  ${alignr}${color1}${kernel}${color0}
 ${goto 32}Uptime: ${alignr}${color1}${uptime}${color0}
-#${goto 32}Updates: ${alignr}${color1}${execi 1800 aptitude search "~U" | wc -l}${color0}
 # |--CPU
 ${voffset 2} ${offset 2}${color0}${font Poky:size=14}P${font}
 ${voffset -18} ${color0}${goto 32}AMD Ryzen 7 4800H${alignr}${color1}${freq_g} GHz${color0}
@@ -145,7 +144,6 @@ ${font}${color0}${goto 32}Up: ${font Ubuntu:size=8}${color1}${upspeed eth0}${col
 ${goto 32}Insgesamt:${alignr}${font Ubuntu:size=8}${color1}${totalup eno1}${color0}${font}
 ${goto 32}Down: ${font Ubuntu:size=8}${color1}${downspeed eth0}${color0}${font} ${alignr}${color2}${downspeedgraph eno1 8,60 555753 2E3436}${color0}
 ${goto 32}Insgesamt:${alignr}${font Ubuntu:size=8}${color1}${totaldown eno1}${color0}${font}
-#${goto 32}Speed:${goto 105}${font Ubuntu:size=8}${color1}${downspeedf eno1}${color0}${font}
 ${goto 32}Lokale IP: ${alignr}${color1}${addr eno1}${color0}
 ${endif}\
 # |--LAN-Adapter
@@ -157,7 +155,6 @@ ${font}${color0}${goto 32}Up: ${font Ubuntu:size=8}${color1}${upspeed enxa0cec81
 ${goto 32}Insgesamt:${alignr}${font Ubuntu:size=8}${color1}${totalup enxa0cec812dc30}${color0}${font}
 ${goto 32}Down: ${font Ubuntu:size=8}${color1}${downspeed enxa0cec812dc30}${color0}${font} ${alignr}${color2}${downspeedgraph enxa0cec812dc30 8,60 555753 2E3436}${color0}
 ${goto 32}Insgesamt:${alignr}${font Ubuntu:size=8}${color1}${totaldown enxa0cec812dc30}${color0}${font}
-#${goto 32}Speed:${goto 105}${font Ubuntu:size=8}${color1}${downspeedf enxa0cec812dc30}${color0}${font}
 ${goto 32}Lokale IP: ${alignr}${color1}${addr enxa0cec812dc30}${color0}
 ${endif}\
 # |--Mobile network
