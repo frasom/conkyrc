@@ -6,7 +6,6 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/frasom/conkyrc)
 ![GitHub License](https://img.shields.io/github/license/frasom/conkyrc)
 ![GitHub repo size](https://img.shields.io/github/repo-size/frasom/conkyrc)
-![GitHub Release](https://img.shields.io/github/v/release/frasom/conkyrc)
 
 Conky is a versatile system monitor for the desktop.
 
