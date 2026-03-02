@@ -1,5 +1,13 @@
 # Conky configuration file
 
+![Static Badge](https://img.shields.io/badge/OS-Linux-lightgrey)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/frasom/conkyrc)
+![GitHub last commit](https://img.shields.io/github/last-commit/frasom/conkyrc)
+![GitHub top language](https://img.shields.io/github/languages/top/frasom/conkyrc)
+![GitHub License](https://img.shields.io/github/license/frasom/conkyrc)
+![GitHub repo size](https://img.shields.io/github/repo-size/frasom/conkyrc)
+![GitHub Release](https://img.shields.io/github/v/release/frasom/conkyrc)
+
 Conky is a versatile system monitor for the desktop.
 
 [https://github.com/brndnmtthws/conky](https://github.com/brndnmtthws/conky)
