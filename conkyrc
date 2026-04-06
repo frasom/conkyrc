@@ -94,7 +94,7 @@ ${voffset -2}${goto 32}F: ${font Ubuntu:size=8}${color1}$swapmax${color0}${font}
 # - AKKU - #
 ############
 ${voffset 2}${font Ubuntu:size=8:style=Bold}AKKU $stippled_hr${font}
-${if_match ${battery_percent BAT0} <= 10}${color red}${else}${if_match ${battery_percent BAT0} <= 20}${color #FF8000}${else}${if_match ${battery_percent BAT0} <= 30}${color #FFD133}${else}${color0}${endif}${endif}${font Poky:size=13}E${font}${color0}${goto 32}${voffset -5}Akku:${goto 105}${font Ubuntu:size=8}${color1}${battery_percent BAT0}%${color0}${font}
+${if_match ${battery_percent BAT0} <= 10}${color red}${else}${if_match ${battery_percent BAT0} <= 20}${color #FF8000}${else}${if_match ${battery_percent BAT0} <= 30}${color #FFD133}${else}${color0}${endif}${endif}${endif}${font Poky:size=13}E${font}${color0}${goto 32}${voffset -5}Akku:${goto 105}${font Ubuntu:size=8}${color1}${battery_percent BAT0}%${color0}${font}
 ${voffset 2}${offset 1}${color0}${battery_bar 4,18 BAT0}${color0}${voffset -2}${goto 32}Restzeit:${goto 105} ${battery_time BAT0} ${color0}${font}
 ${color0}${goto 32}Temperatur:${goto 105}${font Ubuntu:size=8}${color1}${acpitemp} °C${color0}${font}
 ${color0}${goto 32}Spannung:${goto 105}${font Ubuntu:size=8}${color1}${execi 60 sensors |grep in0: | awk '{print $2}' } V${color0}${font}
@@ -168,7 +168,7 @@ ${goto 32}Lokale IP: ${alignr}${color1}${addr enxb0a4606a2128}${color0}
 ${endif}\
 # |--WAN-Info
 ${font Ubuntu:size=8:style=Bold}WAN${font}${color0}
-${goto 32}Öffentliche IP: ${alignr}${color1}${execi 900 wget http://v4.ipv6-test.com/api/myip.php -q -O -}${color0}
+${goto 32}Öffentliche IP: ${alignr}${color1}${execi 900 wget https://ipinfo.io/ip -qO -}${color0}
 ${goto 32}Gateway: ${alignr}${color1}${gw_ip}${color0}
 ${goto 32}Nameserver: ${alignr}${color1}${nameserver}${color0}
 ${goto 32}Interface: ${alignr}${color1}${gw_iface}${color0}
